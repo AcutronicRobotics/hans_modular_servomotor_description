@@ -97,21 +97,25 @@
       </link>
 
       <joint name="motor1" type="revolute">
-        <origin xyz="-0.12 0 0" rpy="0 ${-PI/2} 0" />
-        <parent link="elfin_module_14" />
+        <origin xyz="-0.12 0 0" rpy="0 ${-3.1416/2} 0" />
+        <parent link="motor1_link" />
         <child link="dummy_link1" />
         <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="34" velocity="1.57" />
       </joint>
 
       <joint name="motor2" type="revolute">
-        <origin xyz="0 -0.16 0" rpy="${PI/2} 0 0" />
-        <parent link="elfin_module_14" />
+        <origin xyz="0 -0.16 0" rpy="${3.1416/2} 0 0" />
+        <parent link="motor1_link" />
         <child link="dummy_link2" />
         <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="34" velocity="1.57" />
       </joint>
-
+      <joint name="${prefix}motor1_cover_joint" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 0.0"/>
+        <parent link="${prefix}motor1_link"/>
+        <child link="${prefix}motor1_cover"/>
+      </joint>
       <gazebo>
         <plugin name="hros_actuation_servomotor_000000000001" filename="libmara_gazebo_joint_plugin.so">
           <ros></ros>

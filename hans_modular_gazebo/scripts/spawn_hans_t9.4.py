@@ -12,11 +12,11 @@ def main(args=None):
     node = rclpy.create_node('minimal_client')
     cli = node.create_client(SpawnEntity, '/spawn_entity')
 
-    prefix_path = get_prefix_path('hans_t9.4_description')
+    prefix_path = get_prefix_path('hans_t9_4_description')
     assert os.path.isdir(prefix_path)
 
     content = ""
-    with open(prefix_path + "/share/hans_t9.4_description/urdf/hans_t9.4.urdf", 'r') as content_file:
+    with open(prefix_path + "/share/hans_t9_4_description/urdf/hans_t9.4.urdf", 'r') as content_file:
         content = content_file.read()
 
     req = SpawnEntity.Request()

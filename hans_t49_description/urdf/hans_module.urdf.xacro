@@ -2,7 +2,6 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="robotiq_hande" >
 
-  <!-- robotiq hande_gripper -->
   <xacro:include filename="$(find hans_t49_description)/urdf/hans_t49.urdf.xacro" />
   <xacro:hans49 prefix=""/>
 

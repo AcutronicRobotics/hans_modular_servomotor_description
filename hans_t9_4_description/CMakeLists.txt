@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(hans_t9.4_description)
+project(hans_t9_4_description)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)

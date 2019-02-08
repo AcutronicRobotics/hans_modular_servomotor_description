@@ -9,8 +9,8 @@ from launch.actions.execute_process import ExecuteProcess
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    urdf = os.path.join(get_package_share_directory('hans_t9.4_description'), 'urdf', 'hans_t9.4.urdf')
-    install_dir = get_package_prefix('hans_t9.4_description')
+    urdf = os.path.join(get_package_share_directory('hans_t9_4_description'), 'urdf', 'hans_t9.4.urdf')
+    install_dir = get_package_prefix('hans_t9_4_description')
 
     print("install_dir ", install_dir)
 

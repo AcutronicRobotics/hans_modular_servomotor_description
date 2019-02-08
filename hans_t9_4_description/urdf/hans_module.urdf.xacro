@@ -2,9 +2,8 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="robotiq_hande" >
 
-  <!-- robotiq hande_gripper -->
-  <xacro:include filename="$(find hans_t9.4_description)/urdf/hans_t9.4.urdf.xacro" />
-  <xacro:hans9.4 prefix=""/>
+  <xacro:include filename="$(find hans_t9_4_description)/urdf/hans_t9.4.urdf.xacro" />
+  <xacro:hans9_4 prefix=""/>
 
   <link name="world" />
 
