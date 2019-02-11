@@ -98,3 +98,65 @@ The H-ROS System on Module (SoM) is a tiny device for building industrial grade 
       <td class="disabled-text">0-50ºC</td>
   </tr>
 </tbody></table>
+
+
+# Install
+
+## Install ROS 2.0
+
+Install ROS 2.0 following the official instructions: [source](https://index.ros.org/doc/ros2/Linux-Development-Setup/) [debian packages](https://index.ros.org/doc/ros2/Linux-Install-Debians/).
+
+## Create mara ROS 2.0 workspace
+Create a ROS workspace, for example:
+
+```bash
+mkdir -p ~/ros2_mara_ws/src
+cd ~/ros2_mara_ws
+sudo apt install -y python3-vcstool python3-numpy
+wget https://raw.githubusercontent.com/acutronicrobotics/MARA/master/mara-ros2.repos
+vcs import src < mara-ros2.repos
+```
+
+Generate HRIM dependencies:
+
+```bash
+pip3 install lxml
+cd ~/ros2_mara_ws/src/HRIM
+python3 hrim.py generate models/actuator/servo/servo.xml
+python3 hrim.py generate models/actuator/gripper/gripper.xml
+```
+
+## Compile
+
+**Optional note**: If you want to use MoveIT! you need to source ROS 1.0 environment variables. Typically, if you have installed ROS `Kinetic`, you need to source the following file:
+
+```bash
+source /opt/ros/kinetic/setup.bash
+```
+
+Right now you can compile the code:
+
+```bash
+source /opt/ros/crystal/setup.bash
+cd ~/ros2_mara_ws && colcon build --merge-install
+```
+
+# Launch
+
+### T9.4 ( HANS series 14 )
+
+```
+ros2 launch hans_modular_gazebo hans_t9_4.launch.py
+```
+
+### T30 ( HANS series 17 )
+
+```
+ros2 launch hans_modular_gazebo hans_t30.launch.py
+```
+
+### T49 ( HANS series 20 )
+
+```
+ros2 launch hans_modular_gazebo hans_t49.launch.py
+```
