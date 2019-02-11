@@ -37,7 +37,7 @@
         <visual>
           <origin rpy="0 0 0" xyz="0 0 0"/>
           <geometry>
-            <mesh filename="package://hans_t49_description/meshes/HANS_T49_black.dae" scale="0.001 0.001 0.001"/>
+            <mesh filename="package://hans_t49_description/meshes/HANS_T49_Black.dae" scale="0.001 0.001 0.001"/>
           </geometry>
           <material name="Gazebo/Black">
             <color rgba="0. 0. 0. 1"/>
@@ -46,7 +46,7 @@
         <collision>
           <origin rpy="0 0 0" xyz="0 0 0"/>
           <geometry>
-            <mesh filename="package://hans_t49_description/meshes/HANS_T49_black.dae" scale="0.001 0.001 0.001"/>
+            <mesh filename="package://hans_t49_description/meshes/HANS_T49_Black.dae" scale="0.001 0.001 0.001"/>
           </geometry>
         </collision>
       </link>
@@ -97,7 +97,7 @@
       </link>
 
       <joint name="motor1" type="revolute">
-        <origin xyz="-0.12 0 0" rpy="0 ${-3.1416/2} 0" />
+        <origin rpy="0 -1.5708 0" xyz="0.109255 0 0.16074"/>
         <parent link="motor1_link" />
         <child link="dummy_link1" />
         <axis xyz="0 0 1" />
@@ -105,7 +105,7 @@
       </joint>
 
       <joint name="motor2" type="revolute">
-        <origin xyz="0 -0.16 0" rpy="${3.1416/2} 0 0" />
+        <origin rpy="1.5708 0 0" xyz="0 0 0"/>
         <parent link="motor1_link" />
         <child link="dummy_link2" />
         <axis xyz="0 0 1" />
