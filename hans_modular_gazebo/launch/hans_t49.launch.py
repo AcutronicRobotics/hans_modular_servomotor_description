@@ -40,6 +40,6 @@ def generate_launch_description():
             env=envs
         ),
         Node(package='robot_state_publisher', node_executable='robot_state_publisher', output='screen', arguments=[urdf]),
-        Node(package='robotiq_gazebo', node_executable='hans_t49.launch.py', output='screen'),
+        Node(package='hans_modular_gazebo', node_executable='spawn_hans_t49.py', output='screen'),
     ])
     return ld
