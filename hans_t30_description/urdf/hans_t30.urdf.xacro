@@ -100,7 +100,7 @@
         <origin rpy="0 -1.5708 0" xyz="-0.109255 0 0.149255"/>
         <parent link="motor1_link" />
         <child link="dummy_link1" />
-        <axis xyz="0 0 1" />
+        <axis xyz="1 0 0"/>
         <limit lower="-3.14" upper="3.14" effort="34" velocity="1.57" />
       </joint>
       <joint name="motor2" type="revolute">

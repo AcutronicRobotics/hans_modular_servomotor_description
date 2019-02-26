@@ -108,7 +108,7 @@
         <origin rpy="1.5708 0 0" xyz="0 0 0"/>
         <parent link="motor1_link" />
         <child link="dummy_link2" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 1 0" />
         <limit lower="-3.14" upper="3.14" effort="34" velocity="1.57" />
       </joint>
       <joint name="${prefix}motor1_cover_joint" type="fixed">
