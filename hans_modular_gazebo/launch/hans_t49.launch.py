@@ -41,5 +41,6 @@ def generate_launch_description():
         ),
         Node(package='robot_state_publisher', node_executable='robot_state_publisher', output='screen', arguments=[urdf]),
         Node(package='hans_modular_gazebo', node_executable='spawn_hans_t49.py', output='screen'),
+        Node(package='mara_utils_scripts', node_executable='mara_joint_control.py', output='screen'),
     ])
     return ld
